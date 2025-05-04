@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-big-shoulders-inline: "Big Shoulders Inline Variable", system-ui;
+  --font-inter: "Inter Variable", sans-serif;
+}

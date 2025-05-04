@@ -1,11 +1,15 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/Header.astro";
+import { ImageGallery } from "../components/ImageGallery";
+import Layout from "../layouts/Layout.astro";
+import { PEXELS_API_KEY } from "../config";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="max-w-7xl mx-auto">
+    <Header />
+    <ImageGallery client:only="react" apiKey={PEXELS_API_KEY} />
+    <Footer />
+  </div>
 </Layout>
