@@ -81,7 +81,9 @@ export const ImageGallery = ({ apiKey }: Props) => {
               )}
         </div>
 
-        {loading && <p className="text-center mt-4">Cargando imágenes...</p>}
+        {loading && (
+          <p className="text-center text-white  mt-4">Cargando imágenes...</p>
+        )}
 
         {images.length > 0 && !loading && (
           <div className="text-center mt-6">
